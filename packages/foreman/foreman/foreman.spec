@@ -4,7 +4,7 @@
 %global dynflow_sidekiq_service_name dynflow-sidekiq@
 %global rake /usr/bin/rake
 
-%global release 11
+%global release 12
 %global prereleasesource develop
 %global prerelease %{?prereleasesource}
 
@@ -205,7 +205,6 @@ BuildRequires: (npm(react-diff-view) >= 2.6.0 with npm(react-diff-view) < 3.0.0)
 BuildRequires: (npm(react-dnd) >= 14.0.2 with npm(react-dnd) < 15.0.0)
 BuildRequires: (npm(react-dnd-html5-backend) >= 14.0.0 with npm(react-dnd-html5-backend) < 15.0.0)
 BuildRequires: (npm(react-dom) >= 16.8.1 with npm(react-dom) < 17.0.0)
-BuildRequires: (npm(react-ellipsis-with-tooltip) >= 1.0.8 with npm(react-ellipsis-with-tooltip) < 2.0.0)
 BuildRequires: (npm(react-helmet) >= 6.1.0 with npm(react-helmet) < 7.0.0)
 BuildRequires: (npm(react-intl) >= 2.8.0 with npm(react-intl) < 3.0.0)
 BuildRequires: (npm(react-loading-skeleton) >= 1.1.2 with npm(react-loading-skeleton) < 2.0.0)
@@ -404,7 +403,6 @@ Requires: (npm(react-diff-view) >= 2.6.0 with npm(react-diff-view) < 3.0.0)
 Requires: (npm(react-dnd) >= 14.0.2 with npm(react-dnd) < 15.0.0)
 Requires: (npm(react-dnd-html5-backend) >= 14.0.0 with npm(react-dnd-html5-backend) < 15.0.0)
 Requires: (npm(react-dom) >= 16.8.1 with npm(react-dom) < 17.0.0)
-Requires: (npm(react-ellipsis-with-tooltip) >= 1.0.8 with npm(react-ellipsis-with-tooltip) < 2.0.0)
 Requires: (npm(react-helmet) >= 6.1.0 with npm(react-helmet) < 7.0.0)
 Requires: (npm(react-intl) >= 2.8.0 with npm(react-intl) < 3.0.0)
 Requires: (npm(react-loading-skeleton) >= 1.1.2 with npm(react-loading-skeleton) < 2.0.0)
@@ -943,6 +941,9 @@ exit 0
 %systemd_postun %{name}.socket
 
 %changelog
+* Wed Jul 23 2025 Evgeni Golov - 3.16.0-0.12.develop
+- Drop ellipsis-with-tooltip requirement
+
 * Thu Jul 17 2025 Evgeni Golov - 3.16.0-0.11.develop
 - Bump charts
 
